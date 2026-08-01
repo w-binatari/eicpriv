@@ -4,55 +4,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="About the Entrepreneurship & Innovation Centre Ltd — mandate, values, and leadership in Port Harcourt." />
+  <meta name="description" content="About Entrepreneurship & Innovation Centre Ltd — mandate, values, and leadership." />
   <title>About – E&amp;I Centre Ltd</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Schibsted+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="wrap header-row">
       <a class="brand" href="/">
-        <img src="/assets/logo/EIC_logo.png" alt="" width="42" height="42" />
-        <span class="brand-text">
-          <strong>E&amp;I Centre</strong>
-          <span>Entrepreneurship &amp; Innovation Centre Ltd</span>
-        </span>
+        <img src="/assets/logo/EIC_logo.png" alt="" width="40" height="40" />
+        <strong>E&amp;I Centre</strong>
       </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav" id="siteNav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="/about.html" aria-current="page">About</a></li>
-          <li><a href="/programmes.html">Programmes</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-        <a class="btn btn-gold" href="/contact.html">Partner with us</a>
+        <div class="nav-links">
+          <a href="/about.html" aria-current="page">About</a>
+          <a href="/programmes.html">Programmes</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <a class="btn btn-yellow" href="/contact.html">Partner with us</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <header class="page-hero">
-      <div class="container">
+    <header class="page-top">
+      <div class="wrap">
         <h1>About the Centre</h1>
         <p>
-          We leverage innovation-driven entrepreneurship and strategic partnership to support sustainable
+          We use innovation-driven entrepreneurship and strategic partnership to support sustainable
           economic development and wealth creation.
         </p>
       </div>
     </header>
 
     <section class="section">
-      <div class="container">
-        <div class="prose">
+      <div class="wrap split">
+        <h2 class="section-title">Who we are</h2>
+        <div class="stack">
           <p>
             Entrepreneurship &amp; Innovation Centre (E&amp;I Centre Ltd) is a professional human capital
             development and management consultancy. We provide business and training services for economic
@@ -60,51 +55,48 @@
           </p>
           <p>
             Based in Port Harcourt and affiliated with Rivers State University, the Centre serves as a hub
-            for entrepreneurial education, innovation support, and capacity development — driving growth in
-            Rivers State and across Nigeria.
+            for entrepreneurial education, innovation support, and capacity development across Rivers State
+            and Nigeria.
           </p>
+          <ul class="values">
+            <li>Integrity</li>
+            <li>Respect</li>
+            <li>Innovation</li>
+            <li>Service</li>
+            <li>Excellence</li>
+          </ul>
         </div>
-
-        <ul class="values" aria-label="Core values">
-          <li>Integrity</li>
-          <li>Respect</li>
-          <li>Innovation</li>
-          <li>Service</li>
-          <li>Excellence</li>
-        </ul>
       </div>
     </section>
 
-    <section class="section band-soft">
-      <div class="container">
-        <div class="section-head">
-          <h2>Credentials that matter to industry</h2>
-          <p>Recognition from training bodies, innovation programmes, and institutional partners.</p>
-        </div>
-        <div class="offer-list">
-          <article class="offer-item">
-            <span class="offer-num">01</span>
+    <section class="section services">
+      <div class="wrap">
+        <h2 class="section-title">Credentials</h2>
+        <p class="section-copy">Recognition from training bodies, innovation programmes, and institutional partners.</p>
+        <div class="service-list">
+          <article class="service">
+            <span class="service-num">01</span>
             <div>
               <h3>OGTAN registered training provider</h3>
               <p>Accredited by the Oil &amp; Gas Trainers Association of Nigeria for industry-relevant delivery.</p>
             </div>
           </article>
-          <article class="offer-item">
-            <span class="offer-num">02</span>
+          <article class="service">
+            <span class="service-num">02</span>
             <div>
               <h3>TIIC official consultant</h3>
               <p>Supporting the Tech Innovation Ideas Competition and youth-led innovation pathways.</p>
             </div>
           </article>
-          <article class="offer-item">
-            <span class="offer-num">03</span>
+          <article class="service">
+            <span class="service-num">03</span>
             <div>
               <h3>Startup Science partner</h3>
-              <p>Strategic partnership to connect early-stage ventures with mentorship and visibility.</p>
+              <p>Strategic partnership connecting early-stage ventures with mentorship and visibility.</p>
             </div>
           </article>
-          <article class="offer-item">
-            <span class="offer-num">04</span>
+          <article class="service">
+            <span class="service-num">04</span>
             <div>
               <h3>Rivers State University affiliation</h3>
               <p>Bridging academic knowledge with practical enterprise development in the region.</p>
@@ -115,20 +107,16 @@
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Leadership</h2>
-          <p>Guided by experience across consulting, entrepreneurship, and organisational development.</p>
-        </div>
-
-        <div class="leadership">
-          <div class="leadership-photo">
+      <div class="wrap">
+        <h2 class="section-title" style="margin-bottom: 2rem;">Leadership</h2>
+        <div class="leader">
+          <div class="leader-photo">
             <img src="/assets/images/EIC%20CEO.jpeg" alt="Chika Chinwah, Chief Executive Officer" width="605" height="603" />
           </div>
-          <div class="leadership-bio">
+          <div>
             <h2>Chika Chinwah</h2>
-            <p class="role">Chief Executive Officer · FIMC · MBA · CMC</p>
-            <div class="cred-row">
+            <p class="role">Chief Executive Officer</p>
+            <div class="creds">
               <span>FIMC</span>
               <span>MBA</span>
               <span>CMC</span>
@@ -139,15 +127,10 @@
               oil &amp; gas, technology, and SME sectors.
             </p>
             <p>
-              As CEO of E&amp;I Centre Ltd, he leads a team committed to unlocking entrepreneurial potential,
-              strengthening innovation ecosystems, and delivering training for individuals and corporate
-              organisations.
+              As CEO of E&amp;I Centre Ltd, he leads a team focused on unlocking entrepreneurial potential,
+              strengthening innovation ecosystems, and delivering training for individuals and organisations.
             </p>
-            <p>
-              His work connects academia, industry, and government — positioning the Centre as a trusted hub
-              for business development, startup support, and professional capacity building.
-            </p>
-            <div class="highlights">
+            <div class="leader-points">
               <div>
                 <h3>Fellow, IMC Nigeria</h3>
                 <p>Recognised Fellow of the Institute of Management Consultants.</p>
@@ -166,7 +149,7 @@
               </div>
             </div>
             <p style="margin-top: 1.5rem;">
-              <a class="btn btn-outline" href="https://www.linkedin.com/in/chika-chinwah-fimc-mba-277897164/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+              <a class="btn btn-ghost-dark" href="https://www.linkedin.com/in/chika-chinwah-fimc-mba-277897164/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
             </p>
           </div>
         </div>
@@ -175,20 +158,14 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="wrap">
       <div class="footer-grid">
-        <div class="footer-brand">
+        <div>
           <a class="brand" href="/">
-            <img src="/assets/logo/EIC_logo.png" alt="" width="42" height="42" />
-            <span class="brand-text">
-              <strong>E&amp;I Centre</strong>
-              <span>Rivers State University</span>
-            </span>
+            <img src="/assets/logo/EIC_logo.png" alt="" width="40" height="40" />
+            <strong>E&amp;I Centre</strong>
           </a>
-          <p>
-            The entrepreneurship and innovation hub supporting capacity building, startup development,
-            and industry training in Rivers State and beyond.
-          </p>
+          <p>Entrepreneurship and innovation support for Rivers State and the wider Niger Delta.</p>
         </div>
         <div class="footer-col">
           <h3>Explore</h3>
@@ -204,7 +181,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Entrepreneurship &amp; Innovation Centre Ltd. All rights reserved.</p>
+        <p>© 2026 Entrepreneurship &amp; Innovation Centre Ltd</p>
         <p>OGTAN Registered Training Provider</p>
       </div>
     </div>
