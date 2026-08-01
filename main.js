@@ -1,174 +1,60 @@
 import './style.css';
 
-/* =========================================================
-   Scroll Fade-In Animation (Intersection Observer)
-   ========================================================= */
-const fadeObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-document.querySelectorAll('.fade-in').forEach((el) => fadeObserver.observe(el));
+const header = document.querySelector('.site-header');
+const nav = document.getElementById('siteNav');
+const toggle = document.getElementById('navToggle');
 
-/* =========================================================
-   Mobile Navigation Toggle
-   ========================================================= */
-const navToggle = document.getElementById('navToggle');
-const navLinks  = document.getElementById('navLinks');
-const navCta    = document.getElementById('navCta');
-
-navToggle?.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
+toggle?.addEventListener('click', () => {
+  const open = nav?.classList.toggle('is-open');
+  toggle.setAttribute('aria-expanded', String(Boolean(open)));
 });
 
-// Close mobile nav when a link is clicked
-navLinks?.querySelectorAll('a').forEach((link) => {
+nav?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle?.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
   });
 });
 
-/* =========================================================
-   Event Filter (Tabs)
-   ========================================================= */
-window.filterEvents = function filterEvents(type, btn) {
-  // Update active tab
-  document.querySelectorAll('.tab-btn').forEach((b) => {
-    b.classList.remove('active');
-    b.setAttribute('aria-selected', 'false');
-  });
-  btn.classList.add('active');
-  btn.setAttribute('aria-selected', 'true');
+window.addEventListener(
+  'scroll',
+  () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 8);
+  },
+  { passive: true }
+);
 
-  // Show/hide cards
-  document.querySelectorAll('.event-card').forEach((card) => {
-    const match = type === 'all' || card.dataset.type === type;
-    card.style.display = match ? '' : 'none';
-  });
-};
+const form = document.getElementById('contactForm');
+const note = document.getElementById('formNote');
+const submitBtn = document.getElementById('submitBtn');
 
-/* =========================================================
-   Contact Form — Basic Validation & Submission Handler
-   (Wire up to your CRM / backend endpoint here)
-   ========================================================= */
-const form       = document.getElementById('contactForm');
-const submitBtn  = document.getElementById('submitBtn');
-
-form?.addEventListener('submit', async (e) => {
-  e.preventDefault();
+form?.addEventListener('submit', (event) => {
+  event.preventDefault();
 
   if (!form.checkValidity()) {
     form.reportValidity();
     return;
   }
 
-  // Collect form data (ready for CRM API call)
   const data = Object.fromEntries(new FormData(form));
-
-  // ── CRM Integration Point ──────────────────────────────
-  // Replace the block below with your CRM endpoint, e.g.
-  // HubSpot Forms API, Salesforce Web-to-Lead, Zoho CRM, etc.
-  //
-  // Example (HubSpot):
-  // await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/{portalId}/{formGuid}`, {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({ fields: Object.entries(data).map(([n, v]) => ({ name: n, value: v })) }),
-  // });
-  // ────────────────────────────────────────────────────────
-
   console.log('Form submission:', data);
 
-  // UI feedback
-  submitBtn.textContent = '✅ Message Sent!';
-  submitBtn.disabled = true;
-  submitBtn.style.background = '#00c864';
-  submitBtn.style.color = '#fff';
+  if (note) {
+    note.dataset.state = 'success';
+    note.textContent = 'Thank you. Your message has been recorded. We will respond shortly.';
+  }
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Message sent';
+  }
+
   form.reset();
 
-  setTimeout(() => {
-    submitBtn.textContent = 'Send Message →';
-    submitBtn.style.background = '';
-    submitBtn.style.color = '';
-    submitBtn.disabled = false;
+  window.setTimeout(() => {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
   }, 4000);
 });
-
-/* =========================================================
-   Sticky Navbar — shrink on scroll
-   ========================================================= */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    navbar?.classList.add('scrolled');
-  } else {
-    navbar?.classList.remove('scrolled');
-  }
-}, { passive: true });
-
-/* =========================================================
-   Achievements Carousel Logic
-   ========================================================= */
-const achTrack = document.getElementById('achTrack');
-const achPrev = document.getElementById('achPrev');
-const achNext = document.getElementById('achNext');
-
-if (achTrack) {
-  let currentSlide = 0;
-  let slideInterval;
-  const slides = achTrack.querySelectorAll('.ach-slide');
-  const totalSlides = slides.length;
-
-  const updateCarousel = () => {
-    achTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-  };
-
-  const nextSlide = () => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
-  };
-
-  const prevSlide = () => {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-  };
-
-  const startAutoPlay = () => {
-    slideInterval = setInterval(nextSlide, 5000); // Swipe every 5 seconds
-  };
-
-  const stopAutoPlay = () => {
-    clearInterval(slideInterval);
-  };
-
-  achNext?.addEventListener('click', () => { nextSlide(); stopAutoPlay(); startAutoPlay(); });
-  achPrev?.addEventListener('click', () => { prevSlide(); stopAutoPlay(); startAutoPlay(); });
-
-  // Pause auto-play when hovering over the carousel
-  const carouselContainer = document.getElementById('achCarousel');
-  carouselContainer?.addEventListener('mouseenter', stopAutoPlay);
-  carouselContainer?.addEventListener('mouseleave', startAutoPlay);
-
-  // Initialize auto-play
-  startAutoPlay();
-}
-
-/* =========================================================
-   Hero Background Carousel Logic
-   ========================================================= */
-const heroSlides = document.querySelectorAll('.hero-bg-slide');
-if (heroSlides.length > 0) {
-  let currentHeroSlide = 0;
-  setInterval(() => {
-    heroSlides[currentHeroSlide].classList.remove('active');
-    currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-    heroSlides[currentHeroSlide].classList.add('active');
-  }, 9000); // Change image every 9 seconds
-}
