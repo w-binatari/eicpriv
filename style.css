@@ -302,7 +302,18 @@ ul {
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--white);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.hero-title {
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 3.2vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  max-width: 22ch;
+  margin: 0.85rem 0 1rem;
 }
 
 .hero-lead {
