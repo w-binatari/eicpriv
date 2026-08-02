@@ -24,6 +24,35 @@ window.addEventListener(
   { passive: true }
 );
 
+const deliver = document.getElementById('deliver');
+if (deliver) {
+  const items = deliver.querySelectorAll('.service[data-shot]');
+
+  items.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      deliver.dataset.active = item.dataset.shot || '';
+      deliver.classList.add('is-hot');
+    });
+
+    item.addEventListener('focusin', () => {
+      deliver.dataset.active = item.dataset.shot || '';
+      deliver.classList.add('is-hot');
+    });
+  });
+
+  deliver.addEventListener('mouseleave', () => {
+    deliver.classList.remove('is-hot');
+    deliver.dataset.active = '';
+  });
+
+  deliver.addEventListener('focusout', (event) => {
+    if (!deliver.contains(event.relatedTarget)) {
+      deliver.classList.remove('is-hot');
+      deliver.dataset.active = '';
+    }
+  });
+}
+
 const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
 const submitBtn = document.getElementById('submitBtn');
@@ -39,7 +68,7 @@ form?.addEventListener('submit', (event) => {
 
   if (note) {
     note.dataset.state = 'success';
-    note.textContent = 'Thanks — your message is in. We will get back to you shortly.';
+    note.textContent = 'Thanks. Your message is in. We will get back to you shortly.';
   }
 
   if (submitBtn) {

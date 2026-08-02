@@ -1,4 +1,4 @@
-/* E&I Centre — redesign v2 */
+/* EIC redesign */
 
 :root {
   --black: #0b0b0b;
@@ -268,7 +268,7 @@ ul {
   position: relative;
   z-index: 1;
   padding: clamp(3rem, 10vh, 6rem) 0;
-  max-width: 46rem;
+  max-width: 42rem;
   animation: up 0.8s var(--ease) both;
 }
 
@@ -286,21 +286,32 @@ ul {
 .hero h1 {
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(2.6rem, 6.5vw, 4.5rem);
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.15rem;
-}
-
-.hero h1 span {
+  font-size: clamp(3.2rem, 8vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   color: var(--yellow);
+  margin-bottom: 0.45rem;
 }
 
-.hero p {
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 34rem;
-  margin-bottom: 1.8rem;
+.hero-full {
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+}
+
+.hero-lead {
+  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 38rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.65;
+}
+
+.hero-lead + .hero-actions {
+  margin-top: 1.1rem;
 }
 
 .hero-actions {
@@ -328,6 +339,11 @@ ul {
   color: var(--mute);
   font-size: 1.05rem;
   max-width: 36rem;
+}
+
+.band-soft {
+  background: var(--soft);
+  border-block: 1px solid var(--line);
 }
 
 .split {
@@ -383,7 +399,69 @@ ul {
 
 /* ─── Services ─── */
 .services {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: var(--soft);
+  transition: background 0.35s var(--ease);
+}
+
+.services-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services-shot {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.45s var(--ease), transform 0.7s var(--ease);
+}
+
+.services-shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 8, 8, 0.72);
+  opacity: 0;
+  transition: opacity 0.45s var(--ease);
+}
+
+.services.is-hot .services-shade {
+  opacity: 1;
+}
+
+.services.is-hot[data-active="1"] .services-shot[data-shot="1"],
+.services.is-hot[data-active="2"] .services-shot[data-shot="2"],
+.services.is-hot[data-active="3"] .services-shot[data-shot="3"],
+.services.is-hot[data-active="4"] .services-shot[data-shot="4"] {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.services-fore {
+  position: relative;
+  z-index: 1;
+}
+
+.services.is-hot .section-title,
+.services.is-hot .service h3 {
+  color: var(--white);
+}
+
+.services.is-hot .section-copy,
+.services.is-hot .service p,
+.services.is-hot .service-go {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.services.is-hot .service-list,
+.services.is-hot .service {
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .service-list {
@@ -398,11 +476,21 @@ ul {
   align-items: center;
   padding: 1.5rem 0;
   border-bottom: 1px solid #ddd;
+  cursor: default;
+  transition: padding 0.25s var(--ease);
+}
+
+.service:hover {
+  padding-left: 0.35rem;
 }
 
 .service:hover .service-go {
-  color: var(--ink);
+  color: var(--yellow);
   gap: 0.7rem;
+}
+
+.services.is-hot .service:hover .service-go {
+  color: var(--yellow);
 }
 
 .service-num {
