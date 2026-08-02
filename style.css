@@ -93,20 +93,22 @@ ul {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  min-width: 0;
 }
 
-.brand img {
-  width: 40px;
-  height: 40px;
+.brand-logo {
+  display: block;
+  height: 46px;
+  width: auto;
   object-fit: contain;
 }
 
-.brand strong {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: -0.03em;
+.brand-logo-footer {
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: min(100%, 360px);
+  object-fit: contain;
 }
 
 .nav {
@@ -940,10 +942,6 @@ ul {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.site-footer .brand strong {
-  color: var(--white);
-}
-
 .footer-grid > div > p {
   margin-top: 1rem;
   max-width: 28rem;
@@ -1055,6 +1053,14 @@ ul {
 
   .nav .btn {
     width: 100%;
+  }
+
+  .brand-logo {
+    height: 40px;
+  }
+
+  .brand-logo-footer {
+    height: 48px;
   }
 
   .logo-wall {
