@@ -778,6 +778,10 @@ ul {
   border-top: 1px solid var(--line);
 }
 
+.row.no-media {
+  grid-template-columns: 7.5rem 1fr auto;
+}
+
 .row:last-child {
   border-bottom: 1px solid var(--line);
 }
@@ -997,7 +1001,8 @@ ul {
   }
 
   .service,
-  .row {
+  .row,
+  .row.no-media {
     grid-template-columns: 1fr;
     gap: 0.55rem;
   }
