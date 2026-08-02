@@ -98,17 +98,17 @@ ul {
 
 .brand-logo {
   display: block;
-  height: 52px;
+  height: 48px;
   width: auto;
-  max-width: min(52vw, 280px);
+  max-width: min(70vw, 340px);
   object-fit: contain;
 }
 
 .brand-logo-footer {
   display: block;
-  height: 64px;
+  height: 58px;
   width: auto;
-  max-width: min(100%, 420px);
+  max-width: min(100%, 460px);
   object-fit: contain;
 }
 
