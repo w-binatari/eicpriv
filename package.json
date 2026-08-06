@@ -2,7 +2,7 @@
   "name": "eic-website",
   "private": true,
   "version": "1.0.0",
-  "description": "Entrepreneurship & Innovation Centre | Rivers State University",
+  "description": "Entrepreneurship & Innovation Centre – Rivers State University",
   "type": "module",
   "scripts": {
     "dev": "vite",
