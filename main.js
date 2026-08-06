@@ -1,174 +1,87 @@
 import './style.css';
 
-/* =========================================================
-   Scroll Fade-In Animation (Intersection Observer)
-   ========================================================= */
-const fadeObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-document.querySelectorAll('.fade-in').forEach((el) => fadeObserver.observe(el));
+const header = document.querySelector('.site-header');
+const nav = document.getElementById('siteNav');
+const toggle = document.getElementById('menuBtn');
 
-/* =========================================================
-   Mobile Navigation Toggle
-   ========================================================= */
-const navToggle = document.getElementById('navToggle');
-const navLinks  = document.getElementById('navLinks');
-const navCta    = document.getElementById('navCta');
-
-navToggle?.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
+toggle?.addEventListener('click', () => {
+  const open = nav?.classList.toggle('is-open');
+  toggle.setAttribute('aria-expanded', String(Boolean(open)));
 });
 
-// Close mobile nav when a link is clicked
-navLinks?.querySelectorAll('a').forEach((link) => {
+nav?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle?.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
   });
 });
 
-/* =========================================================
-   Event Filter (Tabs)
-   ========================================================= */
-window.filterEvents = function filterEvents(type, btn) {
-  // Update active tab
-  document.querySelectorAll('.tab-btn').forEach((b) => {
-    b.classList.remove('active');
-    b.setAttribute('aria-selected', 'false');
+window.addEventListener(
+  'scroll',
+  () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 6);
+  },
+  { passive: true }
+);
+
+const deliver = document.getElementById('deliver');
+if (deliver) {
+  const items = deliver.querySelectorAll('.service[data-shot]');
+
+  items.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      deliver.dataset.active = item.dataset.shot || '';
+      deliver.classList.add('is-hot');
+    });
+
+    item.addEventListener('focusin', () => {
+      deliver.dataset.active = item.dataset.shot || '';
+      deliver.classList.add('is-hot');
+    });
   });
-  btn.classList.add('active');
-  btn.setAttribute('aria-selected', 'true');
 
-  // Show/hide cards
-  document.querySelectorAll('.event-card').forEach((card) => {
-    const match = type === 'all' || card.dataset.type === type;
-    card.style.display = match ? '' : 'none';
+  deliver.addEventListener('mouseleave', () => {
+    deliver.classList.remove('is-hot');
+    deliver.dataset.active = '';
   });
-};
 
-/* =========================================================
-   Contact Form — Basic Validation & Submission Handler
-   (Wire up to your CRM / backend endpoint here)
-   ========================================================= */
-const form       = document.getElementById('contactForm');
-const submitBtn  = document.getElementById('submitBtn');
+  deliver.addEventListener('focusout', (event) => {
+    if (!deliver.contains(event.relatedTarget)) {
+      deliver.classList.remove('is-hot');
+      deliver.dataset.active = '';
+    }
+  });
+}
 
-form?.addEventListener('submit', async (e) => {
-  e.preventDefault();
+const form = document.getElementById('contactForm');
+const note = document.getElementById('formNote');
+const submitBtn = document.getElementById('submitBtn');
 
+form?.addEventListener('submit', (event) => {
+  event.preventDefault();
   if (!form.checkValidity()) {
     form.reportValidity();
     return;
   }
 
-  // Collect form data (ready for CRM API call)
-  const data = Object.fromEntries(new FormData(form));
+  console.log('Form submission:', Object.fromEntries(new FormData(form)));
 
-  // ── CRM Integration Point ──────────────────────────────
-  // Replace the block below with your CRM endpoint, e.g.
-  // HubSpot Forms API, Salesforce Web-to-Lead, Zoho CRM, etc.
-  //
-  // Example (HubSpot):
-  // await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/{portalId}/{formGuid}`, {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({ fields: Object.entries(data).map(([n, v]) => ({ name: n, value: v })) }),
-  // });
-  // ────────────────────────────────────────────────────────
+  if (note) {
+    note.dataset.state = 'success';
+    note.textContent = 'Thanks. Your message is in. We will get back to you shortly.';
+  }
 
-  console.log('Form submission:', data);
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sent';
+  }
 
-  // UI feedback
-  submitBtn.textContent = '✅ Message Sent!';
-  submitBtn.disabled = true;
-  submitBtn.style.background = '#00c864';
-  submitBtn.style.color = '#fff';
   form.reset();
 
-  setTimeout(() => {
-    submitBtn.textContent = 'Send Message →';
-    submitBtn.style.background = '';
-    submitBtn.style.color = '';
-    submitBtn.disabled = false;
-  }, 4000);
+  window.setTimeout(() => {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
+  }, 3500);
 });
-
-/* =========================================================
-   Sticky Navbar — shrink on scroll
-   ========================================================= */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    navbar?.classList.add('scrolled');
-  } else {
-    navbar?.classList.remove('scrolled');
-  }
-}, { passive: true });
-
-/* =========================================================
-   Achievements Carousel Logic
-   ========================================================= */
-const achTrack = document.getElementById('achTrack');
-const achPrev = document.getElementById('achPrev');
-const achNext = document.getElementById('achNext');
-
-if (achTrack) {
-  let currentSlide = 0;
-  let slideInterval;
-  const slides = achTrack.querySelectorAll('.ach-slide');
-  const totalSlides = slides.length;
-
-  const updateCarousel = () => {
-    achTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-  };
-
-  const nextSlide = () => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
-  };
-
-  const prevSlide = () => {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-  };
-
-  const startAutoPlay = () => {
-    slideInterval = setInterval(nextSlide, 5000); // Swipe every 5 seconds
-  };
-
-  const stopAutoPlay = () => {
-    clearInterval(slideInterval);
-  };
-
-  achNext?.addEventListener('click', () => { nextSlide(); stopAutoPlay(); startAutoPlay(); });
-  achPrev?.addEventListener('click', () => { prevSlide(); stopAutoPlay(); startAutoPlay(); });
-
-  // Pause auto-play when hovering over the carousel
-  const carouselContainer = document.getElementById('achCarousel');
-  carouselContainer?.addEventListener('mouseenter', stopAutoPlay);
-  carouselContainer?.addEventListener('mouseleave', startAutoPlay);
-
-  // Initialize auto-play
-  startAutoPlay();
-}
-
-/* =========================================================
-   Hero Background Carousel Logic
-   ========================================================= */
-const heroSlides = document.querySelectorAll('.hero-bg-slide');
-if (heroSlides.length > 0) {
-  let currentHeroSlide = 0;
-  setInterval(() => {
-    heroSlides[currentHeroSlide].classList.remove('active');
-    currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-    heroSlides[currentHeroSlide].classList.add('active');
-  }, 9000); // Change image every 9 seconds
-}
