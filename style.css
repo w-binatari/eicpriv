@@ -1,5 +1,5 @@
 /* =========================================================
-   E&I Centre – Global CSS Variables & Base Styles
+   E&I Centre - Global CSS Variables & Base Styles
    ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
@@ -276,6 +276,22 @@ nav {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+}
+
+.header-wordmark {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: min(58vw, 320px);
+  object-fit: contain;
+}
+
+.footer-wordmark {
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: min(100%, 360px);
+  object-fit: contain;
 }
 
 /* Header adjustments for discover all button */
@@ -1656,6 +1672,10 @@ footer {
 @media (max-width: 900px) {
   .nav-cta.desktop-cta {
     display: none;
+  }
+
+  .header-wordmark {
+    height: 40px;
   }
 
   .nav-hamburger {

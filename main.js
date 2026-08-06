@@ -55,7 +55,7 @@ window.filterEvents = function filterEvents(type, btn) {
 };
 
 /* =========================================================
-   Contact Form — Basic Validation & Submission Handler
+   Contact Form - Basic Validation & Submission Handler
    (Wire up to your CRM / backend endpoint here)
    ========================================================= */
 const form       = document.getElementById('contactForm');
@@ -102,7 +102,7 @@ form?.addEventListener('submit', async (e) => {
 });
 
 /* =========================================================
-   Sticky Navbar — shrink on scroll
+   Sticky Navbar - shrink on scroll
    ========================================================= */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
