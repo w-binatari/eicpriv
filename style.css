@@ -431,6 +431,14 @@ nav {
   }
 }
 
+.header-wordmark {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: min(58vw, 340px);
+  object-fit: contain;
+}
+
 .logo-icon-wrap {
   height: 48px;
   display: flex;
@@ -1989,6 +1997,11 @@ footer {
 
   .nav-hamburger {
     display: flex;
+  }
+
+  .header-wordmark {
+    height: 40px;
+    max-width: min(62vw, 280px);
   }
 
   .mobile-cta-item {
