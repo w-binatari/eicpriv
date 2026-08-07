@@ -8,23 +8,12 @@ const fadeObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.08 }
+  { threshold: 0.12 }
 );
-
-document.querySelectorAll('.fade-in, .reveal').forEach((el) => {
-  const rect = el.getBoundingClientRect();
-  const inViewOnLoad = rect.top < window.innerHeight && rect.bottom > 0;
-  if (inViewOnLoad) {
-    el.classList.add('visible');
-  } else {
-    el.classList.add('will-animate');
-    fadeObserver.observe(el);
-  }
-});
+document.querySelectorAll('.fade-in').forEach((el) => fadeObserver.observe(el));
 
 /* =========================================================
    Mobile Navigation Toggle
@@ -47,36 +36,26 @@ navLinks?.querySelectorAll('a').forEach((link) => {
 });
 
 /* =========================================================
-   Services Vertical Tabs
+   Event Filter (Tabs)
    ========================================================= */
-document.querySelectorAll('.service-tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Remove active from all buttons
-    document.querySelectorAll('.service-tab-btn').forEach(b => {
-      b.classList.remove('active');
-      b.setAttribute('aria-selected', 'false');
-    });
-    
-    // Hide all panels
-    document.querySelectorAll('.service-panel').forEach(p => {
-      p.classList.remove('active');
-    });
-    
-    // Set clicked button strictly active
-    btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
-    
-    // Show correct panel
-    const targetId = btn.getAttribute('data-target');
-    const targetPanel = document.getElementById(targetId);
-    if (targetPanel) {
-      targetPanel.classList.add('active');
-    }
+window.filterEvents = function filterEvents(type, btn) {
+  // Update active tab
+  document.querySelectorAll('.tab-btn').forEach((b) => {
+    b.classList.remove('active');
+    b.setAttribute('aria-selected', 'false');
   });
-});
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected', 'true');
+
+  // Show/hide cards
+  document.querySelectorAll('.event-card').forEach((card) => {
+    const match = type === 'all' || card.dataset.type === type;
+    card.style.display = match ? '' : 'none';
+  });
+};
 
 /* =========================================================
-   Contact Form — Basic Validation & Submission Handler
+   Contact Form - Basic Validation & Submission Handler
    (Wire up to your CRM / backend endpoint here)
    ========================================================= */
 const form       = document.getElementById('contactForm');
@@ -123,7 +102,7 @@ form?.addEventListener('submit', async (e) => {
 });
 
 /* =========================================================
-   Sticky Navbar — shrink on scroll
+   Sticky Navbar - shrink on scroll
    ========================================================= */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
