@@ -2669,3 +2669,24 @@ h1, h2, h3,
 }
 
 }
+
+/* Partners strip in multi-page home */
+.partners {
+  padding: 72px 0 64px;
+  background: #fff;
+}
+.partners-header {
+  padding: 0 5% 28px;
+  text-align: center;
+}
+.partners-header .eyebrow {
+  margin-bottom: 8px;
+}
+.partners-header .section-title {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: -.03em;
+}
+.partners-header .section-title span {
+  color: var(--yellow-dark);
+}
