@@ -731,6 +731,53 @@ nav {
   letter-spacing: .5px;
 }
 
+.core-values-label {
+  color: var(--yellow);
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 18px 0 12px;
+}
+
+.irise-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 4px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.irise-row {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+}
+
+.irise-tile {
+  --tile: clamp(22px, 4.2vw, 30px);
+  width: var(--tile);
+  height: var(--tile);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5A623;
+  color: #111;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: clamp(.7rem, 1.5vw, .85rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  border-radius: 0;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.irise-tile.irise-lead {
+  background: #000;
+  color: #fff;
+}
+
 .about-list {
   list-style: none;
   margin-top: 18px;
