@@ -244,7 +244,7 @@
 <div class="topbar">
   <div class="topbar-inner">
     <span>📍 No. 41 Mbonu Street, D-Line, Port Harcourt, Rivers State</span>
-    <span>📞 <a href="tel:+234">+234 (0) — —</a> &nbsp;|&nbsp; ✉️ <a href="mailto:info@eicentre.ng">info@eicentre.ng</a></span>
+    <span>📞 <a href="tel:+234">+234</a> &nbsp;|&nbsp; ✉️ <a href="mailto:info@eicentre.ng">info@eicentre.ng</a></span>
   </div>
 </div>
 
@@ -275,7 +275,7 @@
   <div class="hero-content fade-in">
     <div class="hero-badge">🏛️ E&I Centre • Est. Centre of Excellence</div>
     <h1>Powering <span>Entrepreneurship</span> &amp; Innovation in the Niger Delta</h1>
-    <p>The Entrepreneurship &amp; Innovation Centre (E&amp;I Centre Ltd) is a leading capacity-building and innovation hub in Port Harcourt — equipping individuals, startups, and organisations with the tools to thrive in a competitive economy.</p>
+    <p>The Entrepreneurship &amp; Innovation Centre (E&amp;I Centre Ltd) is a leading capacity-building and innovation hub in Port Harcourt, equipping individuals, startups, and organisations with the tools to thrive in a competitive economy.</p>
     <div class="hero-btns">
       <a class="btn-primary" href="#events">Explore Our Programmes</a>
       <a class="btn-outline" href="#about">Who We Are</a>
@@ -301,7 +301,7 @@
       <h2 class="section-title">Building the Next Generation of <span>Innovators</span></h2>
       <div class="divider"></div>
       <p class="section-sub">The Entrepreneurship &amp; Innovation Centre (E&amp;I Centre Ltd) is dedicated to fostering entrepreneurial culture, supporting startups, and delivering world-class capacity development programmes across the Niger Delta and beyond.</p>
-      <p class="section-sub" style="margin-top:12px;">We partner with industry leaders, government institutions, and international bodies to create a thriving ecosystem where ideas transform into ventures — and ventures transform into impact.</p>
+      <p class="section-sub" style="margin-top:12px;">We partner with industry leaders, government institutions, and international bodies to create a thriving ecosystem where ideas transform into ventures, and ventures transform into impact.</p>
       <div class="focus-chips">
         <span class="chip">🎓 Capacity Building</span>
         <span class="chip">💡 Innovation Consulting</span>
@@ -314,7 +314,7 @@
     <div class="about-visual">
       <div class="about-card">
         <h3>Our Mandate</h3>
-        <p>To serve as the premier centre for entrepreneurial education, innovation support, and capacity development — driving economic growth in Rivers State and across Nigeria.</p>
+        <p>To serve as the premier centre for entrepreneurial education, innovation support, and capacity development, driving economic growth in Rivers State and across Nigeria.</p>
         <ul class="about-list">
           <li>Registered Training Provider with OGTAN (Oil &amp; Gas Trainers Association of Nigeria)</li>
           <li>Official Consultant for the Tech Innovation Ideas Competition (TIIC)</li>
@@ -427,12 +427,12 @@
       <div class="role">Fellow, Institute of Management Consultants (FIMC) &nbsp;|&nbsp; MBA &nbsp;|&nbsp; CMC</div>
       <p>Chika Chinwah is a seasoned management consultant, entrepreneur, and innovation leader with extensive experience driving organisational transformation and capacity development across Nigeria's oil &amp; gas, technology, and SME sectors.</p>
       <p>As the CEO of the Entrepreneurship &amp; Innovation Centre Ltd, he leads a dynamic team committed to unlocking entrepreneurial potential, fostering innovation ecosystems, and delivering impactful training programmes to individuals and corporate organisations alike.</p>
-      <p>His work bridges the gap between academia, industry, and government — making the E&amp;I Centre a trusted hub for business development, startup incubation, and professional capacity building in Rivers State and beyond.</p>
+      <p>His work bridges the gap between academia, industry, and government, making the E&amp;I Centre a trusted hub for business development, startup incubation, and professional capacity building in Rivers State and beyond.</p>
       <div class="divider"></div>
       <div class="ceo-highlights">
         <div class="highlight-item">
           <h4>Fellow, IMC Nigeria</h4>
-          <p>Recognised Fellow of the Institute of Management Consultants — demonstrating the highest professional standard in consulting.</p>
+          <p>Recognised Fellow of the Institute of Management Consultants, demonstrating the highest professional standard in consulting.</p>
         </div>
         <div class="highlight-item">
           <h4>TIIC Consultant</h4>
@@ -440,7 +440,7 @@
         </div>
         <div class="highlight-item">
           <h4>OGTAN Registered Trainer</h4>
-          <p>Certified training provider under the Oil &amp; Gas Trainers Association of Nigeria — a mark of industry credibility.</p>
+          <p>Certified training provider under the Oil &amp; Gas Trainers Association of Nigeria, a mark of industry credibility.</p>
         </div>
         <div class="highlight-item">
           <h4>Startup Science Partner</h4>
@@ -485,7 +485,7 @@
       </div>
       <div class="event-body">
         <div class="date">March 2025</div>
-        <h3>Tech Innovation Ideas Competition (TIIC) — Consultancy</h3>
+        <h3>Tech Innovation Ideas Competition (TIIC), Consultancy</h3>
         <p>E&amp;I Centre served as official consultant for the inaugural TIIC, facilitating youth-driven tech ideation across Rivers State.</p>
       </div>
       <div class="event-footer"><a href="#">View Details →</a><span class="attendees">150+ Participants</span></div>
@@ -500,7 +500,7 @@
       <div class="event-body">
         <div class="date">June 2025</div>
         <h3>OGTAN-Certified Local Content Training Programme</h3>
-        <p>Industry-specific training designed to build local capacity in alignment with the Nigerian Content Act — delivered to 60+ participants.</p>
+        <p>Industry-specific training designed to build local capacity in alignment with the Nigerian Content Act, delivered to 60+ participants.</p>
       </div>
       <div class="event-footer"><a href="#">View Details →</a><span class="attendees">60+ Participants</span></div>
     </div>
@@ -513,7 +513,7 @@
       </div>
       <div class="event-body">
         <div class="date">September 2025</div>
-        <h3>Startup Science Tech Ideas Portal Launch — PH Edition</h3>
+        <h3>Startup Science Tech Ideas Portal Launch, PH Edition</h3>
         <p>Partnership event to onboard Port Harcourt-based startups onto the Startup Science platform for funding and visibility.</p>
       </div>
       <div class="event-footer"><a href="#">View Details →</a><span class="attendees">40+ Startups</span></div>
@@ -541,7 +541,7 @@
       </div>
       <div class="event-body">
         <div class="date">May 2026</div>
-        <h3>Digital Innovation Summit — Port Harcourt 2026</h3>
+        <h3>Digital Innovation Summit, Port Harcourt 2026</h3>
         <p>A flagship annual summit bringing together tech leaders, innovators, and entrepreneurs to shape the digital economy of the Niger Delta.</p>
       </div>
       <div class="event-footer"><a href="#contact">Register Interest →</a><span class="attendees">200+ Expected</span></div>
@@ -559,7 +559,7 @@
     <div class="ach-card">
       <div class="ach-icon">🏆</div>
       <h3>TIIC Official Consultants</h3>
-      <p>Appointed as consultants for the Tech Innovation Ideas Competition — facilitating ideas-to-venture pathways for youth innovators across the Niger Delta region.</p>
+      <p>Appointed as consultants for the Tech Innovation Ideas Competition, facilitating ideas-to-venture pathways for youth innovators across the Niger Delta region.</p>
       <span class="ach-tag">Innovation</span>
     </div>
     <div class="ach-card">
@@ -571,7 +571,7 @@
     <div class="ach-card">
       <div class="ach-icon">📜</div>
       <h3>OGTAN Registered Training Provider</h3>
-      <p>Officially accredited by the Oil &amp; Gas Trainers Association of Nigeria — certifying the quality and industry relevance of our professional training programmes.</p>
+      <p>Officially accredited by the Oil &amp; Gas Trainers Association of Nigeria, certifying the quality and industry relevance of our professional training programmes.</p>
       <span class="ach-tag">Accreditation</span>
     </div>
     <div class="ach-card">
@@ -583,13 +583,13 @@
     <div class="ach-card">
       <div class="ach-icon">🤝</div>
       <h3>20+ Strategic Partnerships</h3>
-      <p>Built a robust network of corporate, government, and academic partners including NCDMB — amplifying our reach and impact across multiple sectors.</p>
+      <p>Built a robust network of corporate, government, and academic partners including NCDMB, amplifying our reach and impact across multiple sectors.</p>
       <span class="ach-tag">Partnerships</span>
     </div>
     <div class="ach-card">
       <div class="ach-icon">🏛️</div>
       <h3>Centre of Excellence</h3>
-      <p>Recognised as a leading entrepreneurship and innovation hub — bridging academic knowledge with real-world business application.</p>
+      <p>Recognised as a leading entrepreneurship and innovation hub, bridging academic knowledge with real-world business application.</p>
       <span class="ach-tag">Academia</span>
     </div>
   </div>
@@ -603,7 +603,7 @@
       <div class="contact-info">
         <h2>Let's Build Something <span style="color:var(--yellow-dark)">Together</span></h2>
         <div class="divider"></div>
-        <p class="sub">Whether you're looking to enrol in a training programme, explore a partnership, or learn more about the E&amp;I Centre — we'd love to hear from you.</p>
+        <p class="sub">Whether you're looking to enrol in a training programme, explore a partnership, or learn more about the E&amp;I Centre, we'd love to hear from you.</p>
         <div class="info-item">
           <div class="info-icon">📍</div>
           <div>
@@ -615,7 +615,7 @@
           <div class="info-icon">📞</div>
           <div>
             <h4>Phone</h4>
-            <a href="tel:+234">+234 (0) — — — (Update)</a>
+            <a href="tel:+234">+234</a>
           </div>
         </div>
         <div class="info-item">
@@ -650,7 +650,7 @@
         <div class="map-placeholder">
           <div class="map-pin">📍</div>
           <h3>No. 41 Mbonu Street, D-Line<br>Port Harcourt, Rivers State</h3>
-          <p>Located in the heart of Port Harcourt — easily accessible from major roads</p>
+          <p>Located in the heart of Port Harcourt, easily accessible from major roads</p>
           <a class="map-cta" href="https://maps.google.com/?q=Mbonu+Street+DLine+Port+Harcourt" target="_blank">Open in Google Maps</a>
         </div>
       </div>
@@ -701,7 +701,7 @@
           <small style="color:#888;">Port Harcourt, Nigeria</small>
         </div>
       </div>
-      <p>The premier entrepreneurship and innovation hub in Rivers State — building capacity, driving innovation, and empowering the next generation of Nigerian leaders.</p>
+      <p>The premier entrepreneurship and innovation hub in Rivers State, building capacity, driving innovation, and empowering the next generation of Nigerian leaders.</p>
       <div class="socials-row" style="margin-top:20px;">
         <a class="social-btn s-ig" href="https://www.instagram.com/e.icentreltd/" target="_blank">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
