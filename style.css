@@ -267,11 +267,14 @@ nav {
 
 .header-wordmark {
   display: block;
-  height: 52px;
+  height: 56px;
   width: auto;
-  max-width: min(58vw, 360px);
+  max-width: min(58vw, 380px);
   object-fit: contain;
   object-position: left center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic;
 }
 
 .footer-wordmark {
