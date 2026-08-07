@@ -828,10 +828,6 @@ nav {
   animation: infiniteScroll 30s linear infinite;
 }
 
-.scroll-track:hover {
-  animation-play-state: paused;
-}
-
 @keyframes infiniteScroll {
   0% {
     transform: translateX(0);
@@ -855,13 +851,7 @@ nav {
   height: 110px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.6;
-  transition: var(--transition);
-}
-
-.partner-logo:hover img {
-  filter: grayscale(0%);
+  filter: none;
   opacity: 1;
 }
 
