@@ -431,13 +431,6 @@ nav {
   }
 }
 
-.header-wordmark {
-  display: block;
-  height: 48px;
-  width: auto;
-  max-width: min(58vw, 340px);
-  object-fit: contain;
-}
 
 .logo-icon-wrap {
   height: 48px;
@@ -450,6 +443,19 @@ nav {
   height: 100%;
   width: auto;
   object-fit: contain;
+}
+
+.logo-text {
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.logo-text span {
+  display: block;
+  font-weight: 700;
+  font-size: clamp(0.78rem, 1.5vw, 0.95rem);
+  color: var(--dark);
+  max-width: 14rem;
 }
 
 .nav-links {
@@ -1999,10 +2005,6 @@ footer {
     display: flex;
   }
 
-  .header-wordmark {
-    height: 40px;
-    max-width: min(62vw, 280px);
-  }
 
   .mobile-cta-item {
     display: block;
