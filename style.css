@@ -203,13 +203,14 @@ section {
 }
 
 .trust-icon {
-  width: 18px;
   height: 18px;
+  width: auto;
+  max-width: 48px;
   object-fit: contain;
   flex-shrink: 0;
   display: block;
-  border-radius: 2px;
-  background: #fff;
+  background: transparent;
+  border-radius: 0;
 }
 
 .trust-sep {
