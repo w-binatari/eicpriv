@@ -276,10 +276,11 @@ nav {
 
 .footer-wordmark {
   display: block;
-  height: 56px;
+  height: 64px;
   width: auto;
-  max-width: min(100%, 360px);
+  max-width: min(100%, 380px);
   object-fit: contain;
+  object-position: left center;
 }
 
 /* Header adjustments for discover all button */
@@ -1511,7 +1512,7 @@ nav {
    FOOTER
    ========================================================= */
 footer {
-  background: #0f0f1e;
+  background: #000;
   color: #bbb;
   padding: 60px 5% 24px;
 }
@@ -1530,9 +1531,9 @@ footer {
 .footer-brand p {
   font-size: .83rem;
   line-height: 1.7;
-  color: #888;
+  color: #aaa;
   margin-top: 14px;
-  max-width: 260px;
+  max-width: 280px;
 }
 
 .footer-col h4 {
@@ -1553,7 +1554,7 @@ footer {
 }
 
 .footer-col a {
-  color: #888;
+  color: #aaa;
   font-size: .82rem;
   text-decoration: none;
   transition: var(--transition);
@@ -1564,7 +1565,7 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, .07);
+  border-top: 1px solid rgba(255, 255, 255, .12);
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -1575,7 +1576,7 @@ footer {
 
 .footer-bottom p {
   font-size: .78rem;
-  color: #555;
+  color: #777;
 }
 
 .footer-bottom .ogtan {
@@ -1614,6 +1615,7 @@ footer {
 
   .header-wordmark {
     height: 40px;
+    max-width: min(62vw, 280px);
   }
 
   .nav-hamburger {
