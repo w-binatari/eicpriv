@@ -2162,13 +2162,6 @@ h1, h2, h3,
   letter-spacing: -.02em;
 }
 
-.home-hero .hero-content h1 {
-  font-size: clamp(2.4rem, 6vw, 4.4rem);
-  max-width: 14ch;
-  line-height: 1.05;
-}
-.home-hero .hero-content h1 span { color: var(--yellow); }
-.home-hero .hero-content > p { display: none; }
 
 /* Page heroes */
 .page-hero {
