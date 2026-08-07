@@ -15,11 +15,12 @@ const fadeObserver = new IntersectionObserver(
   { threshold: 0.08 }
 );
 
-document.querySelectorAll('.fade-in').forEach((el) => {
-  // Only animate elements that are NOT already in the viewport on load
+document.querySelectorAll('.fade-in, .reveal').forEach((el) => {
   const rect = el.getBoundingClientRect();
   const inViewOnLoad = rect.top < window.innerHeight && rect.bottom > 0;
-  if (!inViewOnLoad) {
+  if (inViewOnLoad) {
+    el.classList.add('visible');
+  } else {
     el.classList.add('will-animate');
     fadeObserver.observe(el);
   }
