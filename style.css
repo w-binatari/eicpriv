@@ -1,6 +1,14 @@
 /* =========================================================
    E&I Centre - Global CSS Variables & Base Styles
    ========================================================= */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/assets/fonts/inter-latin.woff2') format('woff2');
+}
+
 :root {
   --yellow: #FFB800;
   --yellow-dark: #E0A000;
