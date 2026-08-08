@@ -644,11 +644,12 @@ nav {
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 184, 0, .3);
   border-radius: var(--radius-md);
-  padding: 14px 20px;
+  padding: 14px 22px;
   text-align: center;
   color: #fff;
-  flex: 1 1 120px;
-  min-width: 110px;
+  flex: 1 1 160px;
+  min-width: 140px;
+  max-width: 260px;
 }
 
 .stat-card .num {
