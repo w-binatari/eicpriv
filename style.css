@@ -1566,7 +1566,12 @@ nav {
 }
 
 .map-pin {
-  font-size: 3rem;
+  color: var(--yellow-dark);
+  margin-bottom: 8px;
+}
+
+.map-pin svg {
+  display: block;
 }
 
 .map-placeholder h3 {
@@ -1735,6 +1740,37 @@ footer {
 
 .footer-col a:hover {
   color: var(--yellow);
+}
+
+.footer-contact address,
+.footer-address {
+  font-style: normal;
+  font-size: .86rem;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 16px;
+}
+
+.footer-contact-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.footer-contact-line {
+  display: inline-block;
+  color: var(--yellow) !important;
+  font-size: .84rem !important;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+
+.footer-contact-line:hover {
+  color: #fff !important;
+  text-decoration: underline;
 }
 
 .footer-bottom {
