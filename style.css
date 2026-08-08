@@ -2057,7 +2057,7 @@ a.service-card:hover {
   display: block;
 }
 
-.info-item h4 {
+.info-item h3 {
   font-size: .85rem;
   font-weight: 700;
   color: var(--dark);

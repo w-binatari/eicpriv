@@ -110,6 +110,7 @@ if (achTrack) {
   let slideInterval;
   const slides = achTrack.querySelectorAll('.ach-slide');
   const totalSlides = slides.length;
+  const carouselContainer = document.getElementById('achCarousel');
 
   const updateCarousel = () => {
     achTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -126,6 +127,7 @@ if (achTrack) {
   };
 
   const startAutoPlay = () => {
+    clearInterval(slideInterval);
     slideInterval = setInterval(nextSlide, 5000); // Swipe every 5 seconds
   };
 
@@ -137,10 +139,30 @@ if (achTrack) {
   achPrev?.addEventListener('click', () => { prevSlide(); stopAutoPlay(); startAutoPlay(); });
 
   // Pause auto-play when hovering over the carousel
-  const carouselContainer = document.getElementById('achCarousel');
   carouselContainer?.addEventListener('mouseenter', stopAutoPlay);
   carouselContainer?.addEventListener('mouseleave', startAutoPlay);
 
-  // Initialize auto-play
-  startAutoPlay();
+  // Carousel photography is far below the fold. Load it shortly before the
+  // carousel enters view, then start animation so it does no offscreen work.
+  const activateCarousel = () => {
+    slides.forEach((slide) => {
+      if (slide.dataset.background) {
+        slide.style.backgroundImage = `url("${slide.dataset.background}")`;
+        delete slide.dataset.background;
+      }
+    });
+    startAutoPlay();
+  };
+
+  if ('IntersectionObserver' in window && carouselContainer) {
+    const carouselObserver = new IntersectionObserver((entries, observer) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        activateCarousel();
+        observer.disconnect();
+      }
+    }, { rootMargin: '300px 0px' });
+    carouselObserver.observe(carouselContainer);
+  } else {
+    activateCarousel();
+  }
 }
