@@ -1399,6 +1399,7 @@ a.service-card:hover {
 .offer-expand {
   background: var(--gray);
   border: 1px solid #e6e6e6;
+  scroll-margin-top: 140px;
 }
 
 .offer-expand > summary {
