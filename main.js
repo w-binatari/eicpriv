@@ -144,34 +144,3 @@ if (achTrack) {
   // Initialize auto-play
   startAutoPlay();
 }
-
-/* =========================================================
-   What We Do — open matching offer expansion from hash
-   ========================================================= */
-function openOfferFromHash() {
-  const id = window.location.hash.replace(/^#/, '');
-  if (!id) return;
-  const target = document.getElementById(id);
-  if (!(target instanceof HTMLDetailsElement)) return;
-  document.querySelectorAll('details.offer-expand[open]').forEach((el) => {
-    if (el !== target) el.open = false;
-  });
-  target.open = true;
-  requestAnimationFrame(() => {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-}
-
-openOfferFromHash();
-window.addEventListener('hashchange', openOfferFromHash);
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', () => {
-    const id = link.getAttribute('href')?.slice(1);
-    if (!id) return;
-    const target = document.getElementById(id);
-    if (target instanceof HTMLDetailsElement) {
-      setTimeout(openOfferFromHash, 0);
-    }
-  });
-});
