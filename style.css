@@ -301,7 +301,7 @@ section {
 /* =========================================================
    NAVBAR
    ========================================================= */
-nav {
+#navbar {
   background: var(--white);
   position: sticky;
   top: 66px; /* contact 30 + trust 36 */
@@ -1455,12 +1455,15 @@ a.service-card:hover {
   justify-content: center;
   gap: 10px 28px;
   padding: 16px 5%;
-  margin: 8px 5% 0;
+  margin: 16px 5% 0;
   background: var(--gray);
   border: 1px solid #e6e6e6;
   border-radius: var(--radius-md);
   position: relative;
-  z-index: 0;
+  top: auto;
+  z-index: 1;
+  box-shadow: none;
+  scroll-margin-top: 160px;
 }
 
 .wwd-ribbon a {
@@ -1482,7 +1485,7 @@ a.service-card:hover {
   grid-template-columns: 1.1fr .9fr;
   gap: 28px;
   align-items: center;
-  margin: 36px 5% 0;
+  margin: 28px 5% 0;
   padding: 36px 40px;
   background: var(--dark);
   border-radius: var(--wwd-radius);
@@ -2507,8 +2510,7 @@ footer {
     height: 34px;
   }
 
-  #navbar,
-  nav {
+  #navbar {
     top: 62px; /* contact 28 + trust 34 */
   }
 }
