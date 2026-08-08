@@ -1973,7 +1973,8 @@ footer {
     top: 28px;
   }
 
-  #navbar {
+  #navbar,
+  nav {
     top: 60px;
   }
 }
