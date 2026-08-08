@@ -94,7 +94,7 @@ form?.addEventListener('submit', async (e) => {
   form.reset();
 
   setTimeout(() => {
-    submitBtn.textContent = 'Send Message →';
+    submitBtn.textContent = 'Send Message';
     submitBtn.style.background = '';
     submitBtn.style.color = '';
     submitBtn.disabled = false;
