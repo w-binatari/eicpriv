@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" role="img" aria-label="PECB Approved Partner">
-  <text x="32" y="18" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="14" font-weight="900" fill="#e10600" letter-spacing="0.5">PECB</text>
-  <text x="32" y="32" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="700" fill="#e10600">Approved Partner</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 64" role="img" aria-label="PECB Approved Partner">
+  <rect width="160" height="64" rx="4" fill="#ffffff"/>
+  <text x="80" y="30" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="26" font-weight="900" fill="#E10600" letter-spacing="1">PECB</text>
+  <text x="80" y="50" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#333" letter-spacing="0.8">APPROVED PARTNER</text>
 </svg>
