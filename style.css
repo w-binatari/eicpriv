@@ -205,8 +205,8 @@ section {
   display: flex;
   align-items: center;
   position: sticky;
-  top: 110px; /* contact 30 + navbar ~80 */
-  z-index: 1180;
+  top: 30px; /* below contact ribbon */
+  z-index: 1190;
   border-bottom: 1px solid rgba(0, 0, 0, .06);
   font-size: 11px;
   font-weight: 600;
@@ -304,8 +304,8 @@ section {
 nav {
   background: var(--white);
   position: sticky;
-  top: 30px; /* below contact ribbon */
-  z-index: 1190;
+  top: 66px; /* contact 30 + trust 36 */
+  z-index: 1180;
   box-shadow: var(--shadow-sm);
 }
 
@@ -2537,13 +2537,13 @@ footer {
     padding: 0 4%;
   }
 
-  #navbar,
-  nav {
-    top: 28px;
+  .trust-bar {
+    top: 28px; /* below contact ribbon */
+    height: 34px;
   }
 
-  .trust-bar {
-    top: 92px; /* contact 28 + navbar ~64 */
-    height: 34px;
+  #navbar,
+  nav {
+    top: 62px; /* contact 28 + trust 34 */
   }
 }
