@@ -1126,9 +1126,87 @@ nav {
 }
 
 /* =========================================================
+   SERVICES / WHAT WE DO
+   ========================================================= */
+.services {
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.services-header {
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+.services-header .section-sub {
+  margin-top: 12px;
+  color: #555;
+  max-width: 560px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--gray);
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.service-media {
+  aspect-ratio: 16 / 10;
+  background-size: cover;
+  background-position: center;
+  background-color: #d9d9d9;
+}
+
+.service-body {
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.service-body h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.35;
+}
+
+.service-body p {
+  font-size: .9rem;
+  line-height: 1.65;
+  color: #444;
+}
+
+.service-card--wide {
+  grid-column: span 1;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
    EVENTS & TRAININGS
    ========================================================= */
 .events {
+  padding: 80px 5%;
   background: var(--gray);
 }
 
