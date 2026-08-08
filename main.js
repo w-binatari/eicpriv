@@ -1,21 +1,6 @@
 import './style.css';
 
 /* =========================================================
-   Scroll Fade-In Animation (Intersection Observer)
-   ========================================================= */
-const fadeObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-document.querySelectorAll('.fade-in').forEach((el) => fadeObserver.observe(el));
-
-/* =========================================================
    Mobile Navigation Toggle
    ========================================================= */
 const navToggle = document.getElementById('navToggle');
