@@ -842,7 +842,7 @@ nav {
 
 .about-text .about-list li::before,
 .about-list--ink li::before {
-  color: var(--yellow-dark);
+  background: var(--yellow-dark);
   margin-top: 5px;
 }
 
