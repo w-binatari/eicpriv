@@ -161,14 +161,5 @@ if (achTrack) {
 }
 
 /* =========================================================
-   Hero Background Carousel Logic
+   Hero Background
    ========================================================= */
-const heroSlides = document.querySelectorAll('.hero-bg-slide');
-if (heroSlides.length > 0) {
-  let currentHeroSlide = 0;
-  setInterval(() => {
-    heroSlides[currentHeroSlide].classList.remove('active');
-    currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-    heroSlides[currentHeroSlide].classList.add('active');
-  }, 9000); // Change image every 9 seconds
-}
