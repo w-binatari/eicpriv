@@ -34,7 +34,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  scroll-padding-top: 140px;
+  scroll-padding-top: 160px;
 }
 
 body {
@@ -205,8 +205,8 @@ section {
   display: flex;
   align-items: center;
   position: sticky;
-  top: 30px;
-  z-index: 1002;
+  top: 110px; /* contact 30 + navbar ~80 */
+  z-index: 1001;
   border-bottom: 1px solid rgba(0, 0, 0, .06);
   font-size: 11px;
   font-weight: 600;
@@ -304,8 +304,8 @@ section {
 nav {
   background: var(--white);
   position: sticky;
-  top: 66px;
-  z-index: 999;
+  top: 30px; /* below contact ribbon */
+  z-index: 1002;
   box-shadow: var(--shadow-sm);
 }
 
@@ -1418,7 +1418,7 @@ a.service-card:hover {
 .wwd-programme {
   padding: 56px 5%;
   background: #fff;
-  scroll-margin-top: 140px;
+  scroll-margin-top: 160px;
 }
 
 .wwd-programme--alt {
@@ -2251,13 +2251,13 @@ footer {
     padding: 0 4%;
   }
 
-  .trust-bar {
-    top: 28px;
-    height: 34px;
-  }
-
   #navbar,
   nav {
-    top: 62px;
+    top: 28px;
+  }
+
+  .trust-bar {
+    top: 92px; /* contact 28 + navbar ~64 */
+    height: 34px;
   }
 }
