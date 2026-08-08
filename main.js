@@ -87,7 +87,7 @@ form?.addEventListener('submit', async (e) => {
   console.log('Form submission:', data);
 
   // UI feedback
-  submitBtn.textContent = '✅ Message Sent!';
+  submitBtn.textContent = 'Message Sent';
   submitBtn.disabled = true;
   submitBtn.style.background = '#00c864';
   submitBtn.style.color = '#fff';
