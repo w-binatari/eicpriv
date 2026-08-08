@@ -1,8 +1,6 @@
 /* =========================================================
    E&I Centre - Global CSS Variables & Base Styles
    ========================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
 :root {
   --yellow: #FFB800;
   --yellow-dark: #E0A000;
