@@ -2204,6 +2204,70 @@ a.service-card:hover {
   background: var(--yellow);
 }
 
+/* =========================================================
+   TIC GALLERY
+   ========================================================= */
+.tic-gallery {
+  background: var(--gray);
+  padding: 80px 8%;
+}
+
+.tic-gallery .section-label {
+  color: var(--yellow-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.tic-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.tic-gallery-item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--dark);
+  aspect-ratio: 4 / 5;
+}
+
+.tic-gallery-item--wide {
+  grid-column: span 2;
+  aspect-ratio: 16 / 10;
+}
+
+.tic-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.tic-gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .tic-gallery {
+    padding: 60px 5%;
+  }
+
+  .tic-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .tic-gallery-item--wide {
+    grid-column: span 2;
+  }
+}
+
 .ach-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
