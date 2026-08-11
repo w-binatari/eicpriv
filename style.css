@@ -1037,10 +1037,18 @@ section {
 }
 
 .ceo-feature-media {
+  position: relative;
   min-height: 420px;
-  background-image: var(--ceo-photo);
-  background-size: cover;
-  background-position: top center;
+  overflow: hidden;
+  background: var(--mid);
+}
+
+.ceo-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  display: block;
 }
 
 .ceo-feature-copy {
@@ -2397,10 +2405,17 @@ footer {
 @media (max-width: 1024px) {
   .ceo-feature {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .ceo-feature-media {
-    min-height: 320px;
+    min-height: unset;
+    aspect-ratio: 5 / 4;
+    max-height: 460px;
+  }
+
+  .ceo-feature-media img {
+    object-position: center 10%;
   }
 
   .ceo-feature-copy {
@@ -2496,6 +2511,53 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 520px;
+    padding: 120px 0 56px;
+  }
+
+  .hero p {
+    font-size: .95rem;
+    max-width: none;
+  }
+
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .stat-card {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 0;
+    max-width: none;
+  }
+
+  .ceo-feature-media {
+    aspect-ratio: 4 / 5;
+    max-height: none;
+  }
+
+  .ceo-feature-media img {
+    object-position: center 8%;
+  }
+
+  .ceo-feature-copy {
+    padding: 28px 20px;
+  }
+
+  .ceo-feature-copy h3 {
+    font-size: 1.45rem;
+  }
+
+  .ceo-lead {
+    max-width: none;
+    font-size: .94rem;
+  }
+
+  .ceo-body {
+    max-width: none;
   }
 }
 
