@@ -1,6 +1,93 @@
 import './style.css';
 
 /* =========================================================
+   Hero Content Carousel (desktop/tablet only)
+   ========================================================= */
+const heroCarousel = document.getElementById('heroCarousel');
+const heroSlides = heroCarousel?.querySelectorAll('.hero-slide');
+const heroDots = heroCarousel?.querySelectorAll('.hero-dot');
+const heroMq = window.matchMedia('(min-width: 901px)');
+
+let heroIndex = 0;
+let heroTimer;
+
+const setHeroSlide = (index) => {
+  if (!heroSlides?.length) return;
+
+  heroIndex = index;
+  heroSlides.forEach((slide, i) => {
+    const active = i === index;
+    slide.classList.toggle('is-active', active);
+    slide.setAttribute('aria-hidden', String(!active));
+  });
+
+  heroDots?.forEach((dot, i) => {
+    const active = i === index;
+    dot.classList.toggle('is-active', active);
+    dot.setAttribute('aria-current', active ? 'true' : 'false');
+  });
+};
+
+const nextHeroSlide = () => {
+  if (!heroSlides?.length) return;
+  setHeroSlide((heroIndex + 1) % heroSlides.length);
+};
+
+const startHeroCarousel = () => {
+  clearInterval(heroTimer);
+  if (!heroMq.matches || !heroSlides || heroSlides.length < 2) {
+    setHeroSlide(0);
+    return;
+  }
+  heroTimer = setInterval(nextHeroSlide, 7000);
+};
+
+const stopHeroCarousel = () => {
+  clearInterval(heroTimer);
+};
+
+heroDots?.forEach((dot) => {
+  dot.addEventListener('click', () => {
+    const target = Number(dot.dataset.heroGo);
+    if (Number.isNaN(target)) return;
+    setHeroSlide(target);
+    stopHeroCarousel();
+    startHeroCarousel();
+  });
+});
+
+heroCarousel?.addEventListener('mouseenter', stopHeroCarousel);
+heroCarousel?.addEventListener('mouseleave', startHeroCarousel);
+
+heroMq.addEventListener('change', startHeroCarousel);
+startHeroCarousel();
+
+/* =========================================================
+   Core Services Tabs
+   ========================================================= */
+const serviceTabButtons = document.querySelectorAll('.service-tab-btn');
+const servicePanels = document.querySelectorAll('.service-panel');
+
+serviceTabButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const targetId = button.dataset.target;
+
+    serviceTabButtons.forEach((tab) => {
+      tab.classList.remove('active');
+      tab.setAttribute('aria-selected', 'false');
+    });
+
+    servicePanels.forEach((panel) => {
+      panel.classList.remove('active');
+    });
+
+    button.classList.add('active');
+    button.setAttribute('aria-selected', 'true');
+    document.getElementById(targetId)?.classList.add('active');
+  });
+});
+
+/* =========================================================
    Mobile Navigation Toggle
    ========================================================= */
 const navToggle = document.getElementById('navToggle');
