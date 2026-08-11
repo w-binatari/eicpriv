@@ -2854,7 +2854,7 @@ footer {
   }
 
   .ceo-feature-copy {
-    padding: 28px 20px;
+    padding: 28px 20px 20px;
   }
 
   .ceo-feature-copy h3 {
@@ -2866,8 +2866,8 @@ footer {
     font-size: .94rem;
   }
 
-  .ceo-body {
-    max-width: none;
+  .ceo-bio {
+    padding: 20px 20px 28px;
   }
 }
 
