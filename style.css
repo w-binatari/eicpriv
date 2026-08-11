@@ -1429,7 +1429,7 @@ section {
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 40px;
-  margin-top: 36px;
+  margin-top: 50px;
 }
 
 .services-tabs {
@@ -1446,11 +1446,12 @@ section {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  font-size: .92rem;
+  font-size: .95rem;
   color: #555;
   transition: var(--transition);
   font-family: inherit;
   box-shadow: var(--shadow-sm);
+  line-height: 1.35;
 }
 
 .service-tab-btn:hover {
@@ -1471,30 +1472,20 @@ section {
   border-radius: 12px;
   padding: 40px;
   box-shadow: var(--shadow-md);
-  border: 1px solid rgba(0, 0, 0, .04);
-}
-
-.service-panel {
-  display: none;
-  animation: serviceFadeIn .4s ease forwards;
-}
-
-.service-panel.active {
-  display: block;
 }
 
 .service-panel h3 {
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--dark);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   line-height: 1.25;
 }
 
 .service-panel p {
-  font-size: .96rem;
+  font-size: .95rem;
   color: #555;
-  line-height: 1.75;
+  line-height: 1.7;
   margin: 0;
 }
 
