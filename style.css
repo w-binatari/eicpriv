@@ -1474,6 +1474,15 @@ section {
   box-shadow: var(--shadow-md);
 }
 
+.service-panel {
+  display: none;
+  animation: serviceFadeIn .4s ease forwards;
+}
+
+.service-panel.active {
+  display: block;
+}
+
 .service-panel h3 {
   font-size: 1.6rem;
   font-weight: 800;
