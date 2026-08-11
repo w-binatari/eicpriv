@@ -4,7 +4,8 @@ import './style.css';
    Hero Content Slider (desktop only)
    ========================================================= */
 const heroSlider = document.getElementById('heroSlider');
-const heroDots = document.querySelectorAll('[data-hero-slide]');
+const heroPrev = document.getElementById('heroPrev');
+const heroNext = document.getElementById('heroNext');
 const heroSlides = heroSlider?.querySelectorAll('.hero-slide') ?? [];
 const heroDesktopQuery = window.matchMedia('(min-width: 901px)');
 
@@ -14,13 +15,10 @@ let heroTimer;
 const setHeroSlide = (index) => {
   if (!heroSlides.length) return;
 
-  heroIndex = index;
+  const total = heroSlides.length;
+  heroIndex = ((index % total) + total) % total;
   heroSlides.forEach((slide, i) => {
     slide.classList.toggle('active', i === heroIndex);
-  });
-  heroDots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === heroIndex);
-    dot.setAttribute('aria-current', i === heroIndex ? 'true' : 'false');
   });
 };
 
@@ -28,7 +26,7 @@ const startHeroRotation = () => {
   clearInterval(heroTimer);
   if (!heroDesktopQuery.matches || heroSlides.length <= 1) return;
   heroTimer = setInterval(() => {
-    setHeroSlide((heroIndex + 1) % heroSlides.length);
+    setHeroSlide(heroIndex + 1);
   }, 7000);
 };
 
@@ -45,13 +43,14 @@ const initHeroSlider = () => {
   startHeroRotation();
 };
 
-heroDots.forEach((dot) => {
-  dot.addEventListener('click', () => {
-    const target = Number(dot.dataset.heroSlide);
-    if (Number.isNaN(target)) return;
-    setHeroSlide(target);
-    startHeroRotation();
-  });
+heroPrev?.addEventListener('click', () => {
+  setHeroSlide(heroIndex - 1);
+  startHeroRotation();
+});
+
+heroNext?.addEventListener('click', () => {
+  setHeroSlide(heroIndex + 1);
+  startHeroRotation();
 });
 
 heroSlider?.addEventListener('mouseenter', () => clearInterval(heroTimer));
