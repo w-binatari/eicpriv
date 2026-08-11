@@ -109,16 +109,78 @@
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero" id="hero" aria-label="Hero banner">
-    <div class="hero-bg" aria-hidden="true" style="background-image: url('/assets/images/training%20pictures/Screenshot%202026-02-07%20120754.webp');"></div>
-    <div class="hero-bg-overlay" aria-hidden="true"></div>
-    <div class="hero-content fade-in">
-      <h1>Powering <span>Entrepreneurship</span> &amp; Innovation in the Niger Delta</h1>
-      <p>Entrepreneurship &amp; Innovation Centre Limited (EICL) is an ISO 9001:2015 certified Human Capital Development and Management Consultancy firm. We drive economic empowerment, enterprise growth, and creating sustainable jobs through innovation, technology, and strategic partnerships.</p>
-      <div class="hero-btns">
-        <a class="btn-primary" href="/what-we-do.html">Explore Our Programmes</a>
-        <a class="btn-outline" href="#about">Who We Are</a>
-      </div>
+    <div class="hero-bg-slider" id="heroBgSlider" aria-hidden="true">
+      <div class="hero-bg-slide active" style="background-image: url('/assets/images/training%20pictures/Screenshot%202026-02-07%20120754.webp');"></div>
     </div>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+    <div class="hero-slider" id="heroSlider" aria-live="polite">
+      <article class="hero-slide active" data-slide="intro">
+        <div class="hero-content fade-in">
+          <h1>Powering <span>Entrepreneurship</span> &amp; Innovation in the Niger Delta</h1>
+          <p>Entrepreneurship &amp; Innovation Centre Limited (EICL) is an ISO 9001:2015 certified Human Capital Development and Management Consultancy firm. We drive economic empowerment, enterprise growth, and creating sustainable jobs through innovation, technology, and strategic partnerships.</p>
+          <div class="hero-btns">
+            <a class="btn-primary" href="/what-we-do.html">Explore Our Programmes</a>
+            <a class="btn-outline" href="#about">Who We Are</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="hero-slide hero-slide--desktop" data-slide="tic">
+        <div class="hero-content fade-in">
+          <p class="hero-kicker">Innovation Leadership</p>
+          <h1>Driving Indigenous <span>Innovation</span> in Oil &amp; Gas</h1>
+          <p>EICL was Facilitator of the Tech Innovation Workshop and the Implementing Partner &amp; Facilitator for the maiden edition of the NCDMB Tech-Innovation Challenge (TIC), driving indigenous innovation and startup growth in Nigeria's oil and gas sector.</p>
+          <div class="hero-btns">
+            <a class="btn-primary" href="#expertise">Our Core Services</a>
+            <a class="btn-outline" href="#achievements">See Our Impact</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="hero-slide hero-slide--desktop" data-slide="certs">
+        <div class="hero-content hero-content--wide fade-in">
+          <p class="hero-kicker">Certifications &amp; Recognition</p>
+          <h1>Trusted Credentials &amp; <span>Partnerships</span></h1>
+          <div class="hero-cert-grid" role="list" aria-label="Certifications and recognitions">
+            <div class="hero-cert-item" role="listitem">
+              <img src="/assets/logo/trust/iso-9001.webp" alt="" loading="lazy" decoding="async" />
+              <span>ISO 9001:2015</span>
+            </div>
+            <div class="hero-cert-item" role="listitem">
+              <img src="/assets/logo/trust/ogtan.webp" alt="" loading="lazy" decoding="async" />
+              <span>OGTAN, Port Harcourt Zone Member</span>
+            </div>
+            <div class="hero-cert-item hero-cert-item--dual" role="listitem">
+              <div class="hero-cert-logos">
+                <img src="/assets/images/partners/NCDMB.png" alt="" loading="lazy" decoding="async" />
+                <img src="/assets/logo/trust/certiport.webp" alt="" loading="lazy" decoding="async" />
+              </div>
+              <span>NCDMB NCEC / Certiport Authorized Testing Centre (Pearson VUE)</span>
+            </div>
+            <div class="hero-cert-item hero-cert-item--text" role="listitem">
+              <span class="hero-cert-mark" aria-hidden="true">SS</span>
+              <span>Startup Science USA Partner</span>
+            </div>
+            <div class="hero-cert-item hero-cert-item--text" role="listitem">
+              <span class="hero-cert-mark" aria-hidden="true">GIZ</span>
+              <span>GIZ/DTC Innovation Support Organization</span>
+            </div>
+            <div class="hero-cert-item" role="listitem">
+              <img src="/assets/logo/why%20choose%20us/04.webp" alt="" loading="lazy" decoding="async" />
+              <span>FG 3MTT Applied Learning Centre</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="hero-controls hero-controls--desktop" aria-label="Hero slide navigation">
+      <button class="hero-dot active" type="button" data-hero-slide="0" aria-label="Show intro slide" aria-current="true"></button>
+      <button class="hero-dot" type="button" data-hero-slide="1" aria-label="Show innovation slide"></button>
+      <button class="hero-dot" type="button" data-hero-slide="2" aria-label="Show certifications slide"></button>
+    </div>
+
     <div class="hero-stats" aria-label="Key statistics">
       <div class="stat-card">
         <div class="num">20+</div>
@@ -297,64 +359,63 @@
     </div>
   </section>
 
-    <!-- WHAT WE DO / SERVICES (overview, full detail on What We Do page) -->
-  <section class="services" id="what-we-do" aria-labelledby="what-we-do-heading">
+    <!-- CORE SERVICES / EXPERTISE & PROGRAMMES -->
+  <section class="services" id="expertise" aria-labelledby="expertise-heading">
     <div class="services-header fade-in">
-      <h2 class="section-title" id="what-we-do-heading">What We <span>Offer</span></h2>
+      <p class="section-label">Core Services</p>
+      <h2 class="section-title" id="expertise-heading">Our Expertise &amp; <span>Programmes</span></h2>
       <div class="divider"></div>
       <p class="section-sub">Practical training, consulting, and enterprise support that builds capable people and sustainable businesses.</p>
     </div>
-    <div class="services-grid fade-in">
-      <a class="service-card" href="/what-we-do.html#entrepreneurship-digital">
-        <div class="service-media" style="background-image:url('/assets/images/training%20pictures/Screenshot%202026-02-07%20120754.webp');" role="img" aria-label="Entrepreneurship and digital skills training placeholder"></div>
-        <div class="service-body">
-          <h3>Entrepreneurship And Digital Skills Training</h3>
-          <p>Build enterprise mindset and digital capabilities that help individuals start, run, and grow viable businesses.</p>
+
+    <div class="services-wrapper fade-in">
+      <div class="services-tabs" role="tablist" aria-label="Core service categories">
+        <button class="service-tab-btn active" type="button" data-target="service-1" role="tab" aria-selected="true">Entrepreneurship &amp; Digital Skills</button>
+        <button class="service-tab-btn" type="button" data-target="service-2" role="tab" aria-selected="false">Technical &amp; Vocational Skills</button>
+        <button class="service-tab-btn" type="button" data-target="service-3" role="tab" aria-selected="false">NCDMB HCD Implementation</button>
+        <button class="service-tab-btn" type="button" data-target="service-4" role="tab" aria-selected="false">HCD &amp; Financial Sustainability</button>
+        <button class="service-tab-btn" type="button" data-target="service-5" role="tab" aria-selected="false">Research to Commercialization</button>
+        <button class="service-tab-btn" type="button" data-target="service-6" role="tab" aria-selected="false">Business Incubation &amp; Management</button>
+        <button class="service-tab-btn" type="button" data-target="service-7" role="tab" aria-selected="false">Business Linkages &amp; Consulting</button>
+        <button class="service-tab-btn" type="button" data-target="service-8" role="tab" aria-selected="false">Leadership Development</button>
+      </div>
+
+      <div class="services-content-area">
+        <div class="service-panel active" id="service-1" role="tabpanel">
+          <h3>Entrepreneurship &amp; Digital Skills Training</h3>
+          <p>Tech-IDEAS, 3MTT, and Corporate Upskilling programmes that build enterprise mindset, digital capability, and workplace-ready skills.</p>
         </div>
-      </a>
-      <a class="service-card" href="/what-we-do.html#technical-vocational">
-        <div class="service-media" style="background-image:url('/assets/images/training%20pictures/Screenshot%202026-03-23%20222838.webp');" role="img" aria-label="Technical and vocational skills training placeholder"></div>
-        <div class="service-body">
-          <h3>Technical And Vocational Skills Training</h3>
-          <p>Hands-on technical and vocational programmes that strengthen employability and workplace readiness.</p>
+        <div class="service-panel" id="service-2" role="tabpanel">
+          <h3>Technical &amp; Vocational Skills Training</h3>
+          <p>Industry-standard, safety compliant technical and vocational training that strengthens employability across key sectors.</p>
         </div>
-      </a>
-      <a class="service-card" href="/what-we-do.html#management-consulting">
-        <div class="service-media" style="background-image:url('/assets/images/training%20pictures/Screenshot%202026-03-23%20222907.webp');" role="img" aria-label="Sustainable development consulting placeholder"></div>
-        <div class="service-body">
-          <h3>Sustainable Development and Management Consulting</h3>
-          <p>Advisory support that helps organisations improve performance, sustainability, and management practice.</p>
+        <div class="service-panel" id="service-3" role="tabpanel">
+          <h3>NCDMB HCD Training Implementation Plans</h3>
+          <p>Development and execution of Human Capital Development training implementation plans aligned with NCDMB requirements.</p>
         </div>
-      </a>
-      <a class="service-card" href="/what-we-do.html#business-linkages">
-        <div class="service-media" style="background-image:url('/assets/images/training%20pictures/Screenshot%202026-03-23%20222925.webp');" role="img" aria-label="Business linkages facilitation placeholder"></div>
-        <div class="service-body">
-          <h3>Business Linkages Facilitation</h3>
-          <p>Connect enterprises to markets, partners, and opportunities that unlock growth and job creation.</p>
+        <div class="service-panel" id="service-4" role="tabpanel">
+          <h3>HCD &amp; Financial Sustainability Consulting</h3>
+          <p>Strategy, training, business services, funding models, and execution support for sustainable human capital and enterprise growth.</p>
         </div>
-      </a>
-      <a class="service-card" href="/what-we-do.html#hseq">
-        <div class="service-media" style="background-image:url('/assets/images/training%20pictures/Screenshot%202026-03-23%20222947.webp');" role="img" aria-label="HSEQ services placeholder"></div>
-        <div class="service-body">
-          <h3>HSEQ Services</h3>
-          <p>Health, Safety, Environment, and Quality services that support compliance and operational excellence.</p>
+        <div class="service-panel" id="service-5" role="tabpanel">
+          <h3>Research to Commercialization</h3>
+          <p>Validation, prototyping, and investor readiness support that helps ideas move from research to market-ready ventures.</p>
         </div>
-      </a>
-      <a class="service-card" href="/what-we-do.html#clarity4d">
-        <div class="service-media" style="background-image:url('/assets/logo/why%20choose%20us/04.webp');" role="img" aria-label="Clarity4D profiling and workshop placeholder"></div>
-        <div class="service-body">
-          <h3>Clarity4D Profiling and Workshop</h3>
-          <p>Personality profiling and facilitated workshops that improve teamwork, leadership, and communication.</p>
+        <div class="service-panel" id="service-6" role="tabpanel">
+          <h3>Business Incubation &amp; Management</h3>
+          <p>From idea to market-ready enterprise through structured incubation, venture support, and management training.</p>
         </div>
-      </a>
-      <a class="service-card service-card--wide" href="/what-we-do.html#incubation">
-        <div class="service-media" style="background-image:url('/assets/images/training%20pictures/Screenshot%202026-03-23%20223010.webp');" role="img" aria-label="Business incubation and management training placeholder"></div>
-        <div class="service-body">
-          <h3>Business Incubation and Management Training</h3>
-          <p>Incubation support and management training that help early-stage ventures become investment-ready and sustainable.</p>
+        <div class="service-panel" id="service-7" role="tabpanel">
+          <h3>Business Linkages &amp; Consulting</h3>
+          <p>Market access, partnerships, and R&amp;D commercialization support that connect enterprises to growth opportunities.</p>
         </div>
-      </a>
+        <div class="service-panel" id="service-8" role="tabpanel">
+          <h3>Leadership Development</h3>
+          <p>Executive training, Clarity4D Profiling, and workshops that strengthen leadership, teamwork, and organisational performance.</p>
+        </div>
+      </div>
     </div>
+
     <div class="page-cta-row fade-in">
       <a class="btn-primary" href="/what-we-do.html" aria-label="Learn more about our programmes">Learn more</a>
     </div>
