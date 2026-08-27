@@ -2,24 +2,32 @@
 
 Content management for blog posts, news, and SEO fields.
 
+## Project
+
+| Setting | Value |
+|---------|-------|
+| **Project ID** | `5c0bo9xi` |
+| **Organization ID** | `oeqj3n4qi` (dashboard only) |
+| **Dataset** | `production` |
+
+Root `.env` (copy from `.env.example` if missing):
+
+```
+SANITY_PROJECT_ID=5c0bo9xi
+SANITY_DATASET=production
+```
+
 ## Setup
 
-1. Create a Sanity project at [sanity.io/manage](https://www.sanity.io/manage) (or log in with `npx sanity login`).
-2. Copy your **Project ID** into the root `.env` file:
-
-   ```
-   SANITY_PROJECT_ID=your-project-id
-   SANITY_DATASET=production
-   ```
-
-3. Install studio dependencies and start the editor:
+1. Copy `.env.example` to `.env` in the repo root (already configured if you cloned after setup).
+2. Install studio dependencies and start the editor:
 
    ```bash
    npm install --prefix studio
    npm run studio:dev
    ```
 
-4. Open the studio (usually `http://localhost:3333`), create **Blog Post** documents, and publish.
+3. Open the studio (usually `http://localhost:3333`), create **Blog Post** documents, and publish.
 
 ## Connecting to the website
 
