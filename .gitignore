@@ -1,4 +1,10 @@
 node_modules/
 dist/
 .env
-public/
+public/*
+!public/robots.txt
+!public/sitemap.xml
+!public/llms.txt
+blog/*.html
+!blog/index.html
+blog/blog-filters.js
