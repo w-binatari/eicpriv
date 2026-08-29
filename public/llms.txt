@@ -1,0 +1,31 @@
+# Entrepreneurship & Innovation Centre Ltd
+
+> ISO 9001:2015 certified Human Capital Development and Management Consultancy in Port Harcourt, Nigeria.
+
+## About
+E&I Centre provides entrepreneurship training, innovation consulting, capacity building, and startup support across the Niger Delta and Nigeria.
+
+## Key pages
+- [Home](https://www.eicng.com/)
+- [What We Do](https://www.eicng.com/what-we-do.html)
+- [News & Insights (Blog)](https://www.eicng.com/blog/)
+
+## Recent articles
+- Blog posts will appear here once published in Sanity CMS.
+
+## Programmes
+- Entrepreneurship & Digital Skills
+- Technical & Vocational Training
+- Management Consulting
+- Business Linkages & Incubation
+- HSEQ Services
+
+## Contact
+- Email: info@eicng.com
+- Phone: +2347040001168
+- Address: No. 41 Mbonu Street, D-Line, Port Harcourt, Rivers State, Nigeria
+
+## Social
+- LinkedIn: https://www.linkedin.com/company/entrepreneurship-innovation-centre-limited/
+- Instagram: https://www.instagram.com/e.icentreltd/
+- Facebook: https://web.facebook.com/profile.php?id=100084852630204

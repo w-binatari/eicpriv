@@ -6,10 +6,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predev": "npm run generate:all",
+    "prebuild": "npm run generate:all",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:seo": "node scripts/generate-seo-files.js",
+    "generate:blog": "node scripts/generate-blog.js",
+    "generate:all": "npm run generate:blog && npm run generate:seo",
+    "studio:dev": "npm run dev --prefix studio",
+    "studio:deploy": "npm run deploy --prefix studio"
+  },
+  "dependencies": {
+    "@sanity/client": "^6.29.0"
   },
   "devDependencies": {
+    "md-to-pdf": "^5.2.4",
     "vite": "^5.4.0"
   }
 }
