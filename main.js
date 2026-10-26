@@ -120,53 +120,6 @@ window.filterEvents = function filterEvents(type, btn) {
 };
 
 /* =========================================================
-   Contact Form - Basic Validation & Submission Handler
-   (Wire up to your CRM / backend endpoint here)
-   ========================================================= */
-const form       = document.getElementById('contactForm');
-const submitBtn  = document.getElementById('submitBtn');
-
-form?.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
-  }
-
-  // Collect form data (ready for CRM API call)
-  const data = Object.fromEntries(new FormData(form));
-
-  // ── CRM Integration Point ──────────────────────────────
-  // Replace the block below with your CRM endpoint, e.g.
-  // HubSpot Forms API, Salesforce Web-to-Lead, Zoho CRM, etc.
-  //
-  // Example (HubSpot):
-  // await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/{portalId}/{formGuid}`, {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({ fields: Object.entries(data).map(([n, v]) => ({ name: n, value: v })) }),
-  // });
-  // ────────────────────────────────────────────────────────
-
-  console.log('Form submission:', data);
-
-  // UI feedback
-  submitBtn.textContent = 'Message Sent';
-  submitBtn.disabled = true;
-  submitBtn.style.background = '#00c864';
-  submitBtn.style.color = '#fff';
-  form.reset();
-
-  setTimeout(() => {
-    submitBtn.textContent = 'Send Message';
-    submitBtn.style.background = '';
-    submitBtn.style.color = '';
-    submitBtn.disabled = false;
-  }, 4000);
-});
-
-/* =========================================================
    Sticky Navbar - shrink on scroll
    ========================================================= */
 const navbar = document.getElementById('navbar');
